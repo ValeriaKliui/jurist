@@ -4,21 +4,23 @@ import { Footer } from "./components/Footer";
 import { Prognosis } from "./components/Prognosis";
 import { Partners } from "./components/Partners";
 import { Advantages } from "./components/Advantages";
+import { Preview } from "./components/Preview";
+import { Command } from "./components/Command";
+import { Support } from "./components/Support";
 
-function App() {
-  const [count, setCount] = useState(0);
+const App = () =>
+  <>
+    <Header />
+    <main>
+      <Preview />
+      <Command />
+      <Support />
+      <Partners />
+      <Advantages />
+      <Prognosis />
+    </main>
+    <Footer />
+  </>
 
-  return (
-    <>
-      <Header />
-      <main>
-        <Partners />
-        <Advantages />
-        <Prognosis />
-      </main>
-      <Footer />
-    </>
-  );
-}
 
 export default App;

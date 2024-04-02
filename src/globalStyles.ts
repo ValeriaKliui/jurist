@@ -1,23 +1,24 @@
-import { createGlobalStyle } from "styled-components";
-import GothamWoff from "@assets/fonts/GothamPro.woff";
-import GothamEot from "@assets/fonts/GothamPro.eot";
-import GothamTtf from "@assets/fonts/GothamPro.ttf";
-import GothamBoldWoff from "@assets/fonts/GothamPro-Bold.woff";
-import GothamBoldEot from "@assets/fonts/GothamPro-Bold.eot";
-import GothamBoldTtf from "@assets/fonts/GothamPro-Bold.ttf";
+import { createGlobalStyle } from 'styled-components';
+import GothamWoff from '@assets/fonts/GothamPro.woff';
+import GothamEot from '@assets/fonts/GothamPro.eot';
+import GothamTtf from '@assets/fonts/GothamPro.ttf';
+import GothamBoldWoff from '@assets/fonts/GothamPro-Bold.woff';
+import GothamBoldEot from '@assets/fonts/GothamPro-Bold.eot';
+import GothamBoldTtf from '@assets/fonts/GothamPro-Bold.ttf';
 
 const styled = { createGlobalStyle };
 
 export const GlobalStyles = styled.createGlobalStyle`
   @font-face {
     font-family: Gotham Pro;
-    src: url(${GothamWoff}) format("woff"), url(${GothamEot}) format("eot"),
-      url(${GothamTtf}) format("ttf");
+    src: url(${GothamWoff}) format('woff'),
+      url(${GothamEot}) format('eot'), url(${GothamTtf}) format('ttf');
   }
   @font-face {
     font-family: Gotham Pro Bold;
-    src: url(${GothamBoldWoff}) format("woff"),
-      url(${GothamBoldEot}) format("eot"), url(${GothamBoldTtf}) format("ttf");
+    src: url(${GothamBoldWoff}) format('woff'),
+      url(${GothamBoldEot}) format('eot'),
+      url(${GothamBoldTtf}) format('ttf');
   }
   body,
   html {
@@ -39,10 +40,14 @@ export const GlobalStyles = styled.createGlobalStyle`
     color: inherit;
     cursor: pointer;
   }
+  h2,
   h3,
   h4,
   button {
     font-family: Gotham Pro Bold;
+  }
+  h2 {
+    font-size: 3.42em;
   }
   h3 {
     font-size: 2.3em;
