@@ -4,9 +4,11 @@ import { Link } from "react-router-dom";
 import { ButtonProps } from "./interfaces";
 import { ButtonStyled } from "./styled";
 
-export const Button: FC<ButtonProps> = ({ text, link, unactive }) => {
+export const Button: FC<ButtonProps> = ({ text, link, unactive, ...props }) => {
   const ButtonS = () => (
-    <ButtonStyled $unactive={unactive}>{text}</ButtonStyled>
+    <ButtonStyled $unactive={unactive} {...props}>
+      {text}
+    </ButtonStyled>
   );
 
   return (

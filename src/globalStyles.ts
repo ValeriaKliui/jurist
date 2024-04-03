@@ -11,13 +11,17 @@ const styled = { createGlobalStyle };
 export const GlobalStyles = styled.createGlobalStyle`
   @font-face {
     font-family: Gotham Pro;
-    src: url(${GothamWoff}) format("woff"), url(${GothamEot}) format("eot"),
+    src:
+      url(${GothamWoff}) format("woff"),
+      url(${GothamEot}) format("eot"),
       url(${GothamTtf}) format("ttf");
   }
   @font-face {
     font-family: Gotham Pro Bold;
-    src: url(${GothamBoldWoff}) format("woff"),
-      url(${GothamBoldEot}) format("eot"), url(${GothamBoldTtf}) format("ttf");
+    src:
+      url(${GothamBoldWoff}) format("woff"),
+      url(${GothamBoldEot}) format("eot"),
+      url(${GothamBoldTtf}) format("ttf");
     font-weight: 700;
   }
   body,
@@ -39,6 +43,9 @@ export const GlobalStyles = styled.createGlobalStyle`
     text-decoration: none;
     color: inherit;
     cursor: pointer;
+    &:hover {
+      color: ${({ theme: { colors } }) => colors.brightBlue};
+    }
   }
   h2,
   h3,

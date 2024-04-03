@@ -4,6 +4,9 @@ export const LogoContainer = styled.div`
   display: flex;
   gap: 1.5em;
   align-items: center;
+  &:hover {
+    transform: scale(1.03);
+  }
 `;
 
 export const LogoText = styled.h1`

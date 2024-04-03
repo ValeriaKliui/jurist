@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { NETWORKS } from "@/constants";
 
 import { Logo } from "../Logo";
+import { LiWithoutMarker } from "../Nav/styled";
 import {
   BottomContainer,
   Container,
@@ -22,13 +23,13 @@ export const Footer: FC = () => (
         <Logo />
         <NetworksList>
           {NETWORKS.map(({ Icon, link }) => (
-            <li key={link + Icon}>
+            <LiWithoutMarker key={link + Icon}>
               <Link to={link}>
                 <IconContainer>
                   <Icon />
                 </IconContainer>
               </Link>
-            </li>
+            </LiWithoutMarker>
           ))}
         </NetworksList>
       </FooterTop>

@@ -1,7 +1,7 @@
-import { Link } from "react-router-dom";
-import styled from "styled-components";
 import Arrow from "@assets/icons/arrow.svg";
 import Marker from "@assets/icons/list-s.svg";
+import { Link } from "react-router-dom";
+import styled from "styled-components";
 
 export const Container = styled.div`
   display: flex;

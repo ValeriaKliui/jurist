@@ -1,6 +1,6 @@
 import { SUPPORT } from "@/constants";
 
-import { Container, ItemsContainer, StyledIcon,SupportItem } from "./styled";
+import { Container, ItemsContainer, StyledIcon, SupportItem } from "./styled";
 
 export const Support = () => (
   <Container className="wrapper">

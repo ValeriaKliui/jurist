@@ -22,4 +22,15 @@ export const ButtonStyled = styled.button<{ $unactive: boolean }>`
       ${({ $unactive, theme: { colors } }) =>
         $unactive ? colors.blue : "transparent"};
   }
+  &:hover {
+    background-color: ${({ $unactive, theme: { colors } }) =>
+      $unactive ? "transparent" : colors.brightBlue};
+    color: ${({ $unactive, theme: { colors } }) =>
+      $unactive ? colors.brightBlue : colors.white};
+    &::after {
+      border-bottom: 2px dotted
+        ${({ $unactive, theme: { colors } }) =>
+          $unactive ? colors.brightBlue : "transparent"};
+    }
+  }
 `;

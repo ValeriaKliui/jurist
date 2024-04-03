@@ -1,7 +1,8 @@
-import { Button } from "../Button";
-import { Container, Number, Step, StepsContainer } from "./styled";
 import DiagramImg from "@assets/icons/diagram.svg?react";
 import TargetImg from "@assets/icons/target.svg?react";
+
+import { Button } from "../Button";
+import { Container, Number, Step, StepsContainer } from "./styled";
 
 export const Steps = () => (
   <Container className="wrapper">

@@ -11,6 +11,7 @@ export const FooterTop = styled.div`
   display: flex;
   justify-content: space-between;
   padding: 2em;
+  border-top: 1px solid ${({ theme: { colors } }) => colors.secondary};
 `;
 export const NetworksList = styled.ul`
   padding: 0;
@@ -25,6 +26,9 @@ export const IconContainer = styled.div`
   align-items: center;
   justify-content: center;
   border-radius: 35%;
+  &:hover {
+    transform: scale(1.02);
+  }
 `;
 export const FooterBottom = styled.div`
   background-color: ${({ theme: { colors } }) => colors.footer};
