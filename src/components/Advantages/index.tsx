@@ -1,6 +1,7 @@
 import { ADVANTAGES } from "@/constants";
-import { Container, Advantage, IconContainer } from "./styled";
+
 import { Button } from "../Button";
+import { Advantage, Container, IconContainer } from "./styled";
 
 export const Advantages = () => (
   <Container className="wrapper">

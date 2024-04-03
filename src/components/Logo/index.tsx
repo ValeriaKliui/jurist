@@ -1,5 +1,6 @@
-import { FC } from "react";
 import LogoImg from "@assets/icons/logo.svg?react";
+import { FC } from "react";
+
 import { LogoContainer, LogoText, TextContainer } from "./styled";
 
 export const Logo: FC = () => (

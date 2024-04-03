@@ -1,6 +1,6 @@
-import styled from "styled-components";
 import EarthImg from "@assets/img/earth.png";
 import PeopleImg from "@assets/img/people_bg.svg";
+import styled from "styled-components";
 
 export const Background = styled.div`
   background: url(${EarthImg}) right top no-repeat

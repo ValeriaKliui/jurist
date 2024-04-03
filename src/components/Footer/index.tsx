@@ -1,17 +1,19 @@
 import { FC } from "react";
-import {
-  FooterContainer,
-  NetworksList,
-  Container,
-  IconContainer,
-  FooterTop,
-  FooterBottom,
-  Links,
-  BottomContainer,
-} from "./styled";
-import { Logo } from "../Logo";
-import { NETWORKS } from "@/constants";
 import { Link } from "react-router-dom";
+
+import { NETWORKS } from "@/constants";
+
+import { Logo } from "../Logo";
+import {
+  BottomContainer,
+  Container,
+  FooterBottom,
+  FooterContainer,
+  FooterTop,
+  IconContainer,
+  Links,
+  NetworksList,
+} from "./styled";
 
 export const Footer: FC = () => (
   <FooterContainer>

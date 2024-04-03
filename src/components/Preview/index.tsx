@@ -1,13 +1,14 @@
 import { BONUSES } from '@/constants';
+
 import { Button } from '../Button';
 import {
     Container,
     Main,
     PeopleImg,
     Sub,
-    TextContainer,
-    Text,
     SubItem,
+    Text,
+    TextContainer,
 } from './styled';
 
 export const Preview = () => (

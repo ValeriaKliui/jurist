@@ -15,6 +15,7 @@ export const Grid = styled.div`
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   text-align: center;
+  align-items: center;
 `;
 export const PrognosisContainer = styled.div`
   display: flex;

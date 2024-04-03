@@ -1,5 +1,6 @@
-import { FC, ReactNode } from "react";
+import { FC } from "react";
 import { ThemeProvider } from "styled-components";
+
 import { BaseTheme, ThemeProps } from "./interfaces";
 
 const theme: BaseTheme = {
@@ -12,6 +13,9 @@ const theme: BaseTheme = {
     gray: "#7A7A7A",
     blue: "#273895",
     lightGray: "#B7B6B6",
+    lightestGray: "#C9C9C9",
+    brightBlue: "#2741D0",
+    dark: "#404040",
   },
   fonts: {
     logo: "Roboto, sans-serif",
@@ -19,6 +23,7 @@ const theme: BaseTheme = {
     bold: "Gotham Pro Bold",
   },
   radius: "1.14em",
+  boxShadow: "0 4px 100px 0 rgba(208, 218, 227, 0.57)",
 };
 
 export const Theme: FC<ThemeProps> = ({ children }) => (

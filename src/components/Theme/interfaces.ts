@@ -1,4 +1,4 @@
-import { FC, ReactNode } from "react";
+import { ReactNode } from "react";
 
 export interface ThemeProps {
   children: ReactNode;
@@ -14,6 +14,9 @@ export interface BaseTheme {
     gray: string;
     blue: string;
     lightGray: string;
+    lightestGray: string;
+    brightBlue: string;
+    dark: string;
   };
   fonts: {
     logo: string;
@@ -21,4 +24,5 @@ export interface BaseTheme {
     bold: string;
   };
   radius: string;
+  boxShadow: string;
 }

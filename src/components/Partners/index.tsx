@@ -1,4 +1,4 @@
-import { Background, TextContainer, Text } from "./styled";
+import { Background, Text,TextContainer } from "./styled";
 
 export const Partners = () => (
   <Background>

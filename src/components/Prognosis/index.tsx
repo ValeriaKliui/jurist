@@ -1,12 +1,14 @@
 import { FC } from "react";
-import {
-  Container,
-  Background,
-  Grid,
-  Title,
-  PrognosisContainer,
-} from "./styled";
+
 import { PROGNOSISES } from "@/constants";
+
+import {
+  Background,
+  Container,
+  Grid,
+  PrognosisContainer,
+  Title,
+} from "./styled";
 
 export const Prognosis: FC = () => (
   <Background>

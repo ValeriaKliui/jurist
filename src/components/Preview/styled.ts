@@ -1,5 +1,5 @@
-import styled from 'styled-components';
-import PeopleImage from '@assets/img/people-talking.svg?react';
+import PeopleImage from "@assets/img/people-talking.svg?react";
+import styled from "styled-components";
 
 export const Container = styled.div`
   display: flex;
@@ -19,7 +19,7 @@ export const Text = styled.p`
 export const Sub = styled.div`
   align-self: flex-end;
   display: flex;
-  box-shadow: 0 4px 100px 0 rgba(208, 218, 227, 0.57);
+  box-shadow: ${({ theme }) => theme.boxShadow};
   background-color: ${({ theme: { colors } }) => colors.background};
   border-radius: ${({ theme }) => theme.radius};
   padding: 2em 2em 1em 2em;

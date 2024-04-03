@@ -1,11 +1,25 @@
 import styled from "styled-components";
 
-export const ButtonStyled = styled.button`
-  background-color: ${({ theme: { colors } }) => colors.primary};
+export const ButtonStyled = styled.button<{ $unactive: boolean }>`
+  background-color: ${({ $unactive, theme: { colors } }) =>
+    $unactive ? "transparent" : colors.primary};
   padding: 1.14em 2.28em;
   border-radius: ${({ theme }) => theme.radius};
-  color: ${({ theme: { colors } }) => colors.white};
+  color: ${({ $unactive, theme: { colors } }) =>
+    $unactive ? colors.blue : colors.white};
   border: none;
   cursor: pointer;
   width: fit-content;
+  position: relative;
+  &::after {
+    display: block;
+    content: "";
+    position: relative;
+    top: 7px;
+    width: 100%;
+    height: 2px;
+    border-bottom: 2px dotted
+      ${({ $unactive, theme: { colors } }) =>
+        $unactive ? colors.blue : "transparent"};
+  }
 `;

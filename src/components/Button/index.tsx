@@ -1,16 +1,23 @@
-import { FC, Fragment } from "react";
-import { ButtonStyled } from "./styled";
+import { FC } from "react";
 import { Link } from "react-router-dom";
-import { ButtonProps } from "./interfaces";
 
-export const Button: FC<ButtonProps> = ({ text, link }) => (
-  <>
-    {link ? (
-      <Link to={link}>
-        <ButtonStyled>{text}</ButtonStyled>
-      </Link>
-    ) : (
-      <ButtonStyled>{text}</ButtonStyled>
-    )}
-  </>
-);
+import { ButtonProps } from "./interfaces";
+import { ButtonStyled } from "./styled";
+
+export const Button: FC<ButtonProps> = ({ text, link, unactive }) => {
+  const ButtonS = () => (
+    <ButtonStyled $unactive={unactive}>{text}</ButtonStyled>
+  );
+
+  return (
+    <>
+      {link ? (
+        <Link to={link}>
+          <ButtonS />
+        </Link>
+      ) : (
+        <ButtonS />
+      )}
+    </>
+  );
+};
