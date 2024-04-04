@@ -1,6 +1,5 @@
+import { devices } from "@providers/Theme/constants";
 import styled from "styled-components";
-
-import { devices } from "@/providers/Theme";
 
 export const NavList = styled.ul`
   display: flex;

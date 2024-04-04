@@ -2,18 +2,18 @@ import { devices } from "@providers/Theme/constants";
 import styled from "styled-components";
 
 export const TextContainer = styled.div<{
-  $isReverted: boolean;
-  $isShort: boolean;
+  $isReverted?: boolean;
+  $isShort?: boolean;
 }>`
   display: flex;
   align-items: center;
   gap: 3em;
   flex-basis: 50%;
   ${devices.md} {
-    flex-direction: ${({ $isReverted }) => $isReverted && "column"};
+    flex-direction: ${({ $isReverted = false }) => $isReverted && "column"};
     text-align: center;
     p {
-      display: ${({ $isShort }) => ($isShort ? "none" : "inherit")};
+      display: ${({ $isShort = false }) => ($isShort ? "none" : "inherit")};
     }
   }
   ${devices.sm} {
@@ -23,7 +23,7 @@ export const TextContainer = styled.div<{
     flex-basis: 70%;
   }
 `;
-export const LogoContainer = styled.div<{ $isShort: boolean }>`
+export const LogoContainer = styled.div<{ $isShort?: boolean }>`
   display: flex;
   gap: 1.5em;
   align-items: center;
@@ -31,7 +31,8 @@ export const LogoContainer = styled.div<{ $isShort: boolean }>`
     transform: scale(1.03);
   }
   ${devices.md} {
-    justify-content: ${({ $isShort }) => ($isShort ? "inherit" : "center")};
+    justify-content: ${({ $isShort = false }) =>
+      $isShort ? "inherit" : "center"};
   }
   ${devices.sm} {
     svg {

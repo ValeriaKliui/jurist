@@ -54,7 +54,7 @@ export const Tariffs = () => {
                   <PointsItem key={point}>{point}</PointsItem>
                 ))}
               </PointsList>
-              <LinkStyled>Подробнее в личном кабинете</LinkStyled>
+              <LinkStyled to="">Подробнее в личном кабинете</LinkStyled>
               <Button text="Оставить заявку" block />
             </Tariff>
           );

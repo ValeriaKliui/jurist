@@ -1,21 +1,22 @@
 import styled from "styled-components";
 
+import { devices } from "@/providers/Theme/constants";
+
 export const ButtonStyled = styled.button<{
-  $unactive: boolean;
-  $centered: boolean;
-  $block: boolean;
+  $unactive?: boolean;
+  $centered?: boolean;
+  $block?: boolean;
 }>`
-  background-color: ${({ $unactive, theme: { colors } }) =>
+  background-color: ${({ $unactive = false, theme: { colors } }) =>
     $unactive ? "transparent" : colors.primary};
   padding: 1.14em 2.28em;
   border-radius: ${({ theme }) => theme.radius};
-  color: ${({ $unactive, theme: { colors } }) =>
+  color: ${({ $unactive = false, theme: { colors } }) =>
     $unactive ? colors.blue : colors.white};
   border: none;
   cursor: pointer;
-  width: ${({ $block }) => ($block ? "100%" : "fit-content")};
   position: relative;
-  margin: ${({ $centered }) => ($centered ? "0 auto" : "inherit")};
+  margin: ${({ $centered = false }) => ($centered ? "0 auto" : "inherit")};
   &::after {
     display: block;
     content: "";
@@ -37,5 +38,8 @@ export const ButtonStyled = styled.button<{
         ${({ $unactive, theme: { colors } }) =>
           $unactive ? colors.brightBlue : "transparent"};
     }
+  }
+  ${devices.sm} {
+    width: ${({ $block = false }) => ($block ? "100%" : "fit-content")};
   }
 `;
