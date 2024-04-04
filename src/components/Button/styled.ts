@@ -14,6 +14,7 @@ export const ButtonStyled = styled.button<{
   color: ${({ $unactive = false, theme: { colors } }) =>
     $unactive ? colors.blue : colors.white};
   border: none;
+  width: fit-content;
   cursor: pointer;
   position: relative;
   margin: ${({ $centered = false }) => ($centered ? "0 auto" : "inherit")};
