@@ -1,18 +1,29 @@
+import { devices } from "@providers/Theme/constants";
 import styled from "styled-components";
 
 export const Container = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  ${devices.md} {
+    flex-direction: column;
+  }
 `;
 export const TextContainer = styled.div`
   flex-basis: 40%;
+  ${devices.md} {
+    text-align: center;
+    max-width: 80%;
+  }
 `;
 export const OptionsContainer = styled.div`
   display: grid;
   grid-template-columns: repeat(2, minmax(auto, 200px));
   align-items: end;
   gap: 2em;
+  ${devices.xs} {
+    gap: 1em;
+  }
 `;
 export const Option = styled.div`
   box-shadow: ${({ theme }) => theme.boxShadow};
@@ -24,6 +35,9 @@ export const Option = styled.div`
   display: flex;
   justify-content: center;
   flex-direction: column;
+  ${devices.xs} {
+    padding: 1em;
+  }
 `;
 export const Circle = styled.div`
   border-radius: 100%;
@@ -46,6 +60,16 @@ export const RightCircle = styled(Circle)`
   height: 160px;
   top: -100px;
   right: -50px;
+  ${devices.md} {
+    width: 100px;
+    height: 100px;
+    top: -50px;
+    right: -30px;
+  }
+  ${devices.md} {
+    top: -50px;
+    right: 0px;
+  }
 `;
 export const LeftCircle = styled(Circle)`
   width: 40px;
@@ -69,12 +93,21 @@ export const ColoredText = styled.span`
 `;
 export const BiggestText = styled(ColoredText)`
   font-size: 3.4em;
+  ${devices.xs} {
+    font-size: 2.5em;
+  }
 `;
 export const MiddleText = styled(ColoredText)`
   font-size: 2.6em;
+  ${devices.xs} {
+    font-size: 2em;
+  }
 `;
 export const SmallestText = styled(ColoredText)`
   font-size: 1.2em;
+  ${devices.xs} {
+    font-size: 1em;
+  }
 `;
 export const SmallestSpacedText = styled(SmallestText)`
   letter-spacing: 0.17em;

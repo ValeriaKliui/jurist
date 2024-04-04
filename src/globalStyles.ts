@@ -4,6 +4,7 @@ import GothamWoff from "@assets/fonts/GothamPro.woff";
 import GothamBoldEot from "@assets/fonts/GothamPro-Bold.eot";
 import GothamBoldTtf from "@assets/fonts/GothamPro-Bold.ttf";
 import GothamBoldWoff from "@assets/fonts/GothamPro-Bold.woff";
+import { devices } from "@providers/Theme/constants";
 import { createGlobalStyle } from "styled-components";
 
 const styled = { createGlobalStyle };
@@ -38,6 +39,9 @@ export const GlobalStyles = styled.createGlobalStyle`
     height: 100%;
     display: flex;
     flex-direction: column;
+    ${devices.sm} {
+      font-size: 12px;
+    }
   }
   a {
     text-decoration: none;
@@ -55,14 +59,26 @@ export const GlobalStyles = styled.createGlobalStyle`
   }
   h2 {
     font-size: 3.42em;
+    ${devices.sm} {
+      font-size: 2.7em;
+    }
+    ${devices.xs} {
+      font-size: 2em;
+    }
   }
   h3 {
     font-size: 2.3em;
+    ${devices.sm} {
+      font-size: 2em;
+    }
   }
   h4,
   button,
   .text {
     font-size: 1.14em;
+  }
+  p {
+    line-height: 150%;
   }
   .small-text {
     font-size: 0.86em;
@@ -71,11 +87,38 @@ export const GlobalStyles = styled.createGlobalStyle`
     max-width: 1280px;
     margin: 0 auto;
     width: 100%;
+    ${devices.xl} {
+      max-width: 1200px;
+    }
+    ${devices.lg} {
+      max-width: 840px;
+    }
+    ${devices.md} {
+      max-width: 540px;
+    }
+    ${devices.sm} {
+      max-width: 360px;
+    }
+    ${devices.xs} {
+      max-width: 300px;
+    }
   }
   .wrapper {
     max-width: 1062px;
     margin: 0 auto;
     width: 100%;
+    ${devices.xl} {
+      max-width: 800px;
+    }
+    ${devices.md} {
+      max-width: 540px;
+    }
+    ${devices.sm} {
+      max-width: 360px;
+    }
+    ${devices.xs} {
+      max-width: 300px;
+    }
   }
   .subtext {
     color: ${({ theme: { colors } }) => colors.lightGray};
@@ -87,5 +130,8 @@ export const GlobalStyles = styled.createGlobalStyle`
     display: flex;
     flex-direction: column;
     gap: 5em;
+  }
+  .no-margin {
+    margin: 0;
   }
 `;

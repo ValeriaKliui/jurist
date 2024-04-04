@@ -3,6 +3,7 @@ import { BONUSES } from "@/constants";
 import { Button } from "../Button";
 import {
   Container,
+  IncomeImage,
   Main,
   PeopleImg,
   Sub,
@@ -22,12 +23,13 @@ export const Preview = () => (
           с каждого полиса, купленного по вашему приглашению.
         </Text>
         <Button text="Попробовать бесплатно" />
+        <IncomeImage />
       </TextContainer>
       <PeopleImg />
     </Main>
     <Sub>
       {BONUSES.map(({ Icon, bonus }) => (
-        <SubItem>
+        <SubItem key={bonus}>
           <Icon />
           <h4>{bonus}</h4>
         </SubItem>

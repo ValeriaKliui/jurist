@@ -16,7 +16,7 @@ export const Prognosis: FC = () => (
       <h3>Прогнозы партнерской программы на 2021 год</h3>
       <Grid>
         {PROGNOSISES.map(({ prognose, text, gradientDeg }) => (
-          <PrognosisContainer>
+          <PrognosisContainer key={prognose}>
             <Title $gradientDeg={gradientDeg}>{prognose}</Title>
             <p>{text}</p>
           </PrognosisContainer>

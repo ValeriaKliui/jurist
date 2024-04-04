@@ -16,6 +16,7 @@ const theme: BaseTheme = {
     lightestGray: "#C9C9C9",
     brightBlue: "#2741D0",
     dark: "#404040",
+    lightBlue: "#DEE6EF",
   },
   fonts: {
     logo: "Roboto, sans-serif",

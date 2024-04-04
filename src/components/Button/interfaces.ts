@@ -3,4 +3,6 @@ export interface ButtonProps
   text: string;
   link?: string;
   unactive?: boolean;
+  centered?: boolean;
+  block?: boolean;
 }

@@ -11,6 +11,7 @@ import {
   Container,
   Description,
   FlexContainer,
+  Image,
   TextContainer,
 } from "./styled";
 
@@ -18,7 +19,7 @@ export const Benefits = () => (
   <Container className="wrapper-l">
     <h3>Преимущества сервиса</h3>
     <Description className="wrapper">
-      <img src={PhoneImgSrc} />
+      <Image src={PhoneImgSrc} />
       <div>
         <BlockTitle>SIRIUS</BlockTitle>
         <FlexContainer>
@@ -39,7 +40,7 @@ export const Benefits = () => (
           </TextContainer>
           <BenefitsList>
             {BENEFITS_LIST.map((benefit) => (
-              <BenefitItem>{benefit}</BenefitItem>
+              <BenefitItem key={benefit}>{benefit}</BenefitItem>
             ))}
           </BenefitsList>
         </FlexContainer>
@@ -47,7 +48,7 @@ export const Benefits = () => (
     </Description>
     <BenefitsContainer>
       {BENEFITS.map(({ Icon, title, description }) => (
-        <Benefit>
+        <Benefit key={title}>
           <Icon />
           <h4>{title}</h4>
           <p>{description}</p>

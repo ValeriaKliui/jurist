@@ -7,7 +7,7 @@ export const Support = () => (
     <h4>Даём поддержку</h4>
     <ItemsContainer>
       {SUPPORT.map(({ Icon, title, description }) => (
-        <SupportItem>
+        <SupportItem key={title}>
           <StyledIcon>
             <Icon />
           </StyledIcon>

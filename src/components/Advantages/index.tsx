@@ -6,7 +6,7 @@ import { Advantage, Container, IconContainer } from "./styled";
 export const Advantages = () => (
   <Container className="wrapper">
     {ADVANTAGES.map(({ title, Icon, DescriptionComponent }) => (
-      <Advantage>
+      <Advantage key={title}>
         <IconContainer>
           <Icon />
         </IconContainer>

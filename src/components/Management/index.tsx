@@ -4,16 +4,19 @@ import { Button } from "../Button";
 import {
   Addon,
   Container,
+  Image,
   ImageContainer,
+  PersonInfo,
   Quotes,
   Subtitle,
   Text,
+  TextContainer,
 } from "./styled";
 
 export const Management = () => (
   <Container className="wrapper">
     <ImageContainer>
-      <img src={SEOImg} />
+      <Image src={SEOImg} />
       <Addon>
         <Quotes>“</Quotes>
         <Text className="small-text">
@@ -22,15 +25,17 @@ export const Management = () => (
         </Text>
       </Addon>
     </ImageContainer>
-    <div>
-      <p>Руководитель ООО ILC </p>
-      <h3>Наталья Гуторова</h3>
-      <Subtitle>10 лет в управлении и юриспуденции</Subtitle>
+    <TextContainer>
+      <PersonInfo>
+        <p>Руководитель ООО ILC </p>
+        <h3 className="no-margin">Наталья Гуторова</h3>
+        <Subtitle>10 лет в управлении и юриспуденции</Subtitle>
+      </PersonInfo>{" "}
       <p>
         Мы стараемся окружить заботой и создать максимально комфортные условия
         для развития каждого партнера:
       </p>
-      <ul>
+      <ul className="no-margin">
         <li>
           <p> личный наставник,</p>
         </li>
@@ -49,6 +54,6 @@ export const Management = () => (
         регистрации.
       </p>
       <Button text="Зарегистрироваться" />
-    </div>
+    </TextContainer>
   </Container>
 );

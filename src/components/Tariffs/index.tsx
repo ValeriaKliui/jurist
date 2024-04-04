@@ -20,7 +20,6 @@ import {
 export const Tariffs = () => {
   const [isMonthly, setIsMonthly] = useState(true);
   const period = isMonthly ? "месяц" : "год";
-  console.log(isMonthly);
 
   return (
     <Container className="wrapper">
@@ -45,18 +44,18 @@ export const Tariffs = () => {
           const priceResult = isFirst ? price : `$${totalPrice}/${period}`;
 
           return (
-            <Tariff $isFirst={isFirst}>
+            <Tariff $isFirst={isFirst} key={name}>
               <Title $isFirst={isFirst}>{name}</Title>
               <Auditory>{auditory}</Auditory>
               <Price $isFirst={isFirst}>{priceResult}</Price>
               <Subtitle>Для Вас доступно</Subtitle>
               <PointsList $isFirst={isFirst}>
                 {points.map((point) => (
-                  <PointsItem>{point}</PointsItem>
+                  <PointsItem key={point}>{point}</PointsItem>
                 ))}
               </PointsList>
               <LinkStyled>Подробнее в личном кабинете</LinkStyled>
-              <Button text="Оставить заявку" />
+              <Button text="Оставить заявку" block />
             </Tariff>
           );
         })}

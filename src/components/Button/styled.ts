@@ -1,6 +1,10 @@
 import styled from "styled-components";
 
-export const ButtonStyled = styled.button<{ $unactive: boolean }>`
+export const ButtonStyled = styled.button<{
+  $unactive: boolean;
+  $centered: boolean;
+  $block: boolean;
+}>`
   background-color: ${({ $unactive, theme: { colors } }) =>
     $unactive ? "transparent" : colors.primary};
   padding: 1.14em 2.28em;
@@ -9,8 +13,9 @@ export const ButtonStyled = styled.button<{ $unactive: boolean }>`
     $unactive ? colors.blue : colors.white};
   border: none;
   cursor: pointer;
-  width: fit-content;
+  width: ${({ $block }) => ($block ? "100%" : "fit-content")};
   position: relative;
+  margin: ${({ $centered }) => ($centered ? "0 auto" : "inherit")};
   &::after {
     display: block;
     content: "";

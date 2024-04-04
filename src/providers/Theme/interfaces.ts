@@ -17,6 +17,7 @@ export interface BaseTheme {
     lightestGray: string;
     brightBlue: string;
     dark: string;
+    lightBlue: string;
   };
   fonts: {
     logo: string;
@@ -25,4 +26,13 @@ export interface BaseTheme {
   };
   radius: string;
   boxShadow: string;
+}
+
+export enum ScreenSizes {
+  xs = 400,
+  sm = 600,
+  md = 900,
+  lg = 1280,
+  xl = 1440,
+  xxl = 1920,
 }

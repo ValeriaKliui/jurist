@@ -19,20 +19,22 @@ import {
 export const Footer: FC = () => (
   <FooterContainer>
     <Container>
-      <FooterTop className="wrapper-l">
-        <Logo />
-        <NetworksList>
-          {NETWORKS.map(({ Icon, link }) => (
-            <LiWithoutMarker key={link + Icon}>
-              <Link to={link}>
-                <IconContainer>
-                  <Icon />
-                </IconContainer>
-              </Link>
-            </LiWithoutMarker>
-          ))}
-        </NetworksList>
-      </FooterTop>
+      <div className="wrapper-l">
+        <FooterTop>
+          <Logo isReverted />
+          <NetworksList>
+            {NETWORKS.map(({ Icon, link }) => (
+              <LiWithoutMarker key={link + Icon}>
+                <Link to={link}>
+                  <IconContainer>
+                    <Icon />
+                  </IconContainer>
+                </Link>
+              </LiWithoutMarker>
+            ))}
+          </NetworksList>
+        </FooterTop>
+      </div>
       <FooterBottom>
         <BottomContainer className="wrapper-l">
           <p className="small-text">
